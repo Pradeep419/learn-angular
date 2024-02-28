@@ -1,0 +1,9 @@
+<p *ngIf = "product.price<700">Discount is available for this course</p>
+<ng-container *ngIf= "product.quantity>0 then template1 else template2"></ng-container>
+<ng-template #template1>
+  <button class= "btn btn-primary" [disabled]= toggleBuying (click)= "clickChild()">Check Availability</button>
+</ng-template>
+<ng-template #template2>
+  <p>Product is not available</p>
+</ng-template>
+
